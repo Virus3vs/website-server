@@ -18,7 +18,7 @@ def submit_form():
     error = None
     if request.method == 'POST':
     	data = request.form.to_dict()
-    	with open('database.csv', newline='', 'a') as database:
+    	with open('database.csv', 'a', newline='') as database:
     		email = data["email"]
     		subject = data["subject"]
     		message = data["message"]
